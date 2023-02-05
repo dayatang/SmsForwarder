@@ -6,6 +6,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$versions.android_gradle_plugin"
         classpath deps.android_maven_gradle_plugin
+        classpath 'org.aspectj:aspectjtools:1.9.7'
         //图片压缩
         classpath 'com.chenenyu:img-optimizer:1.2.0'
         //美团多渠道打包

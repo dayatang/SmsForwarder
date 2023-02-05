@@ -140,7 +140,9 @@ class PhoneStateReceiver : BroadcastReceiver() {
         if (callInfo?.number == null) return
 
         //判断是否开启该类型转发
-        if ((callInfo.type == 1 && !SettingUtils.enableCallType1) || (callInfo.type == 2 && !SettingUtils.enableCallType2) || (callInfo.type == 3 && !SettingUtils.enableCallType3)) {
+        if ((callInfo.type == 1 && !SettingUtils.enableCallType1) ||
+                (callInfo.type == 2 && !SettingUtils.enableCallType2) ||
+                (callInfo.type == 3 && !SettingUtils.enableCallType3)) {
             Log.w(TAG, "未开启该类型转发，type=" + callInfo.type)
             return
         }
